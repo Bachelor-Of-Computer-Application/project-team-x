@@ -21,7 +21,8 @@ int main() {
         printf("4. Exit\n");
 
         printf("Enter choice: ");
-        scanf("%d", &ch);
+       // scanf("%d", &ch);
+       
 
         switch (ch) {
             case 1: addVehicle(); break;
