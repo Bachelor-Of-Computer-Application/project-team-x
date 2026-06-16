@@ -3,7 +3,6 @@
 
 #define MAX 100
 
-/* separate storage for each vehicle type */
 char bikes[MAX][15];
 char cars[MAX][15];
 char buses[MAX][15];
