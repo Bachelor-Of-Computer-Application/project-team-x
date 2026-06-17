@@ -1,0 +1,59 @@
+#include <stdio.h>
+
+int main() {
+    int choice;
+    int bus_truck = 0, car_jeep = 0, rikshaw = 0, bike = 0;
+
+    while (1) {
+        printf("\n===== PARKING MANAGEMENT SYSTEM =====\n");
+        printf("1. Bus/Truck\n");
+        printf("2. Car/Jeep\n");
+        printf("3. Rikshaw\n");
+        printf("4. Bike\n");
+        printf("5. Show Vehicle Count\n");
+        printf("6. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                bus_truck++;
+                printf("Bus/Truck Entered Successfully!\n");
+                break;
+
+            case 2:
+                car_jeep++;
+                printf("Car/Jeep Entered Successfully!\n");
+                break;
+
+            case 3:
+                rikshaw++;
+                printf("Rikshaw Entered Successfully!\n");
+                break;
+
+            case 4:
+                bike++;
+                printf("Bike Entered Successfully!\n");
+                break;
+
+            case 5:
+                printf("\n--- Vehicle Count ---\n");
+                printf("Bus/Truck : %d\n", bus_truck);
+                printf("Car/Jeep  : %d\n", car_jeep);
+                printf("Rikshaw   : %d\n", rikshaw);
+                printf("Bike      : %d\n", bike);
+                printf("Total Vehicles : %d\n",
+                       bus_truck + car_jeep + rikshaw + bike);
+                break;
+
+            case 6:
+                printf("Exiting Program...\n");
+                return 0;
+
+            default:
+                printf("Invalid Choice!\n");
+        }
+    }
+
+    return 0;
+}
