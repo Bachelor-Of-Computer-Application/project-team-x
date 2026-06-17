@@ -1,0 +1,40 @@
+# Project: Parking System
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = report.o main.o parking.o auth.o file.o
+LINKOBJ  = report.o main.o parking.o auth.o file.o
+LIBS     = -L"H:/ID/Code/Dev-Cpp/MinGW64/lib" -L"H:/ID/Code/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"H:/ID/Code/Dev-Cpp/MinGW64/include" -I"H:/ID/Code/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"H:/ID/Code/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"H:/ID/Code/Dev-Cpp/MinGW64/include" -I"H:/ID/Code/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"H:/ID/Code/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"H:/ID/Code/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = "Parking System.exe"
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+report.o: report.c
+	$(CC) -c report.c -o report.o $(CFLAGS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+parking.o: parking.c
+	$(CC) -c parking.c -o parking.o $(CFLAGS)
+
+auth.o: auth.c
+	$(CC) -c auth.c -o auth.o $(CFLAGS)
+
+file.o: file.c
+	$(CC) -c file.c -o file.o $(CFLAGS)
