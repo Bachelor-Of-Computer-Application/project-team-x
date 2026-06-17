@@ -7,6 +7,7 @@ int login() {
     printf("ADMIN LOGIN\n");
     printf("Username: ");
     scanf("%s", user);
+    
 
     printf("Password: ");
     scanf("%s", pass);
