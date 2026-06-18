@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+void vehicleEntry() {
+    printf("\nVehicle Entry Selected\n");
+}
+
+void vehicleExit() {
+    printf("\nVehicle Exit Selected\n");
+}
+
+void displayStatus() {
+    printf("\nParking Status Selected\n");
+}
+
+int main() {
+    int choice;
+
+    do {
+        printf("\n===== PARKING SPACE COUNTER =====\n");
+        printf("1. Vehicle Entry\n");
+        printf("2. Vehicle Exit\n");
+        printf("3. Display Parking Status\n");
+        printf("4. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        switch(choice) {
+            case 1:
+                vehicleEntry();
+                break;
+
+            case 2:
+                vehicleExit();
+                break;
+
+            case 3:
+                displayStatus();
+                break;
+
+            case 4:
+                printf("\nThank you for using the Parking System!\n");
+                break;
+
+            default:
+                printf("\nInvalid Choice! Try Again.\n");
+        }
+
+    } while(choice != 4);
+
+    return 0;
+}
